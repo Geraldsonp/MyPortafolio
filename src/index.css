@@ -27,9 +27,17 @@
 .content-div:hover {
     background-image: linear-gradient(
         to right,
-        rgba(112, 157, 255, 0.8),
-        hsla(242, 74%, 61%, 0.8)
+        rgba(112, 157, 255, 0.582),
+        hwb(242 32% 10% / 0.753)
         
     )!important;
 }
 
+.opacitytrs{
+    @apply transition-opacity duration-500
+}
+
+.btnEffect:hover{
+    @apply outline outline-offset-2 outline-2 rounded-sm outline-[#2ba3e0]
+    ease-in-out duration-100
+}
