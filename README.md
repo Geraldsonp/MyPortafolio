@@ -1,2 +1,2 @@
 # My portafolio
-Create with React & Tailwind CSS
+Created with React & Tailwind CSS
