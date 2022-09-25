@@ -41,3 +41,11 @@
     @apply outline outline-offset-2 outline-2 rounded-sm outline-[#2ba3e0]
     ease-in-out duration-100
 }
+
+.skillImg{
+    @apply w-20 mx-auto mt-5
+}
+
+.skill-container{
+    @apply shadow-md shadow-[#040c16] hover:scale-110 duration-500
+}

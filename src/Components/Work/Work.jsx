@@ -14,12 +14,19 @@ const Work = () => {
         {/* Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4 '>
           <WorkGridItem
-            projectName='Issues Web API'
-            codeLink='https://github.com/Geraldsonp/IssueTrackingWebApi'
+            projectName='Issues Traker Web API'
+            ProjectImage={WorkImg}
+            codeLink={"https://github.com/Geraldsonp/IssueTrackingWebApi"}></WorkGridItem>
+          <WorkGridItem
+            projectName='RemoloPizza Web API'
+            codeLink='https://github.com/Geraldsonp/DonRemoloPizza.WebApi'
+            demoLink={"https://pizzeriawebapi.herokuapp.com/swagger/index.html"}
             ProjectImage={WorkImg}></WorkGridItem>
-          <WorkGridItem projectName='Issues React Client' ProjectImage={WorkImg}></WorkGridItem>
-          <WorkGridItem projectName='Todo-App Web API' ProjectImage={WorkImg}></WorkGridItem>
-          <WorkGridItem projectName='Todo-App Web Client' ProjectImage={WorkImg}></WorkGridItem>
+          <WorkGridItem
+            projectName='RemoloPizza CMS'
+            ProjectImage={"https://gpspersonalbucket.s3.amazonaws.com/Pizzerialogo.jpg"}
+            codeLink={"https://github.com/Geraldsonp/pizzacms.git"}
+            demoLink={"https://brilliant-tarsier-b9abbe.netlify.app/"}></WorkGridItem>
         </div>
       </div>
     </div>

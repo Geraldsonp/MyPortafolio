@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WorkGridItem({ projectName, codeLink, ProjectImage }) {
+export default function WorkGridItem({ projectName, codeLink, ProjectImage, demoLink }) {
   return (
     <div
       style={{ backgroundImage: `url(${ProjectImage})` }}
@@ -10,7 +10,7 @@ export default function WorkGridItem({ projectName, codeLink, ProjectImage }) {
       <div className='opacity-0 group-hover:opacity-100 opacitytrs '>
         <span className='text-2xl font-bold text-white tracking-wider'>{projectName}</span>
         <div className='pt-8 text-center '>
-          <a href={codeLink} target='_blank'>
+          <a href={demoLink} target='_blank'>
             <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
               Demo
             </button>
