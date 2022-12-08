@@ -1,6 +1,7 @@
 import React from "react";
 import WorkImg from "../../Assets/workImg.jpeg";
 import WorkGridItem from "./WorkGridItem";
+import RemoloLogo from "../../Assets/RemoloLogo.jpg";
 
 const Work = () => {
   return (
@@ -20,8 +21,8 @@ const Work = () => {
           <WorkGridItem
             projectName='RemoloPizza Web API'
             codeLink='https://github.com/Geraldsonp/DonRemoloPizza.WebApi'
-            demoLink={"https://pizzeriawebapi.herokuapp.com/swagger/index.html"}
-            ProjectImage={WorkImg}></WorkGridItem>
+            demoLink={"https://donremolopizzawebapi-production.up.railway.app/swagger/index.html"}
+            ProjectImage={RemoloLogo}></WorkGridItem>
           <WorkGridItem
             projectName='RemoloPizza CMS'
             ProjectImage={"https://gpspersonalbucket.s3.amazonaws.com/Pizzerialogo.jpg"}
