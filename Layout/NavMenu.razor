@@ -1,0 +1,19 @@
+﻿<div class="bg-BG1 flex px-32 flex-col items-center self-stretch">
+	<div class="flex py-16 justify-between items-center self-stretch">
+		<div>
+			<p><span class="text-Brand1 text-3xl font-medium">&lt;C/&gt;</span> Geraldson Perez</p>
+		</div>
+	</div>
+
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

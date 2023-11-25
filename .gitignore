@@ -1,0 +1,44 @@
+# .gitignore
+
+# Node.js
+node_modules/
+
+# Blazor
+obj/
+bin/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+*.pidb
+*.svclog
+*.cache
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Others
+*.log
+*.bak
+*.tmp
+*.swp
+*.vspscc
+*.vssscc
+*.bak.*
+*.bak_*
+*.bak-*
+*.bak~
