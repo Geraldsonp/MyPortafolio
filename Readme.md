@@ -1,5 +1,3 @@
-Hey Geraldson! 👋
-
 # Geraldson's Portfolio
 
 Welcome to my personal portfolio, where I showcase my passion and skills in the world of software development. This project is crafted using Blazor, a fantastic web framework that lets me express my creativity using C# and HTML, and spiced up with Tailwind CSS, a powerful utility-first CSS framework for crafting sleek user interfaces.
