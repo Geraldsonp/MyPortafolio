@@ -1,19 +1,27 @@
-﻿<div class="bg-BG1 flex px-32 flex-col items-center self-stretch">
-	<div class="flex py-16 justify-between items-center self-stretch">
-		<div>
-			<p><span class="text-Brand1 text-3xl font-medium">&lt;C/&gt;</span> Geraldson Perez</p>
+﻿<div class="bg-BG1 flex px-24 flex-col items-center self-stretch text-white">
+	<div class="flex py-12 justify-between items-center self-stretch">
+		<div class="text-3xl font-medium ">
+			<p><span class="text-Brand1 ">&lt;C/&gt;</span> Geraldson Perez</p>
+		</div>
+		<div class="flex items-center gap-10">
+			<a href="#Home">Home</a>
+			<a href="#Home">Projects</a>
+			<div>
+				<input type="text" class="rounded-lg" />
+				<i class="fa fa-search"></i>
+			</div>
 		</div>
 	</div>
 
 </div>
 
 @code {
-    private bool collapseNavMenu = true;
+	private bool collapseNavMenu = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+	private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+	private void ToggleNavMenu()
+	{
+		collapseNavMenu = !collapseNavMenu;
+	}
 }

@@ -564,8 +564,16 @@ html {
   justify-content: space-between;
 }
 
+.gap-10{
+  gap: 2.5rem;
+}
+
 .self-stretch{
   align-self: stretch;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
 }
 
 .bg-BG1{
@@ -573,9 +581,9 @@ html {
   background-color: rgb(41 47 54 / var(--tw-bg-opacity));
 }
 
-.px-32{
-  padding-left: 8rem;
-  padding-right: 8rem;
+.px-24{
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .px-4{
@@ -583,9 +591,9 @@ html {
   padding-right: 1rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .text-3xl{
@@ -600,6 +608,11 @@ html {
 .text-Brand1{
   --tw-text-opacity: 1;
   color: rgb(18 247 214 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .BGTextU{
