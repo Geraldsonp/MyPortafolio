@@ -544,6 +544,42 @@ html {
   visibility: collapse;
 }
 
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.left-0{
+  left: 0px;
+}
+
+.right-0{
+  right: 0px;
+}
+
+.right-3{
+  right: 0.75rem;
+}
+
+.bottom-2{
+  bottom: 0.5rem;
+}
+
+.top-2{
+  top: 0.5rem;
+}
+
+.top-\[50\%\]{
+  top: 50%;
+}
+
+.top-\[25\%\]{
+  top: 25%;
+}
+
 .flex{
   display: flex;
 }
@@ -596,6 +632,27 @@ html {
   padding-bottom: 3rem;
 }
 
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.ps-4{
+  padding-inline-start: 1rem;
+}
+
+.pl-3{
+  padding-left: 0.75rem;
+}
+
+.pr-6{
+  padding-right: 1.5rem;
+}
+
+.pr-8{
+  padding-right: 2rem;
+}
+
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -613,6 +670,11 @@ html {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .BGTextU{
