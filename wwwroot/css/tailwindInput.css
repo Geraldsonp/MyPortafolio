@@ -16,3 +16,12 @@
 .H1U {
 	@apply text-6xl font-normal
 }
+
+
+.skill-pill {
+	@apply bg-Brand1 text-black rounded-md px-2
+}
+
+.about-section{
+	background: url('../public/images/tile_background.png') 
+}

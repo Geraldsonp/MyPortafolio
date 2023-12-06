@@ -1,15 +1,33 @@
-<div class="flex justify-center flex-col gap-16 pt-16 py-32 pb-32">
-
-	<h1 class="font-Ubuntu text-9xl capitalize text-Brand1 text-center">Developer</h1>
-
-	<div class="flex gap-32 justify-center items-center content-center flex-wrap">
-		<div>
-			cv section
+<div class=" bg-BG1 px-4 xl:px-24 flex flex-wrap flex-col gap-16 py-8 text-white">
+	<h1 class="font-Ubuntu text-8xl capitalize text-Brand1 text-center">Developer</h1>
+	<div class="flex flex-wrap justify-center items-center content-center self-stretch  gap-20">
+		<div class="flex flex-col justify-center gap-8 border-4 border-white p-4 rounded-tl-3xl rounded-br-3xl">
+			<div class="flex flex-col gap-8">
+				<div class="flex flex-col gap-4 justify-center items-center">
+					<img src="./profilePic.jpeg" class="w-24 rounded-full" alt="">
+					<h2 class="font-medium font-IBM text-3xl">Geraldson</h2>
+					<p>Full-stack developer</p>
+				</div>
+				<div class="flex gap-4 flex-col ">
+					<p><i class="fa fa-envelope"></i> Geraldson.a.p@gmail.com</p>
+					<p><i class="fa fa-location-dot"></i> Santo Domingo, Rep.Dom</p>
+					<p><i class="fa fa-briefcase"></i> Full-time / Freelance</p>
+					<div class="flex flex-wrap gap-1">
+						@foreach (var skill in _skills)
+						{
+							<span class="skill-pill">@skill.Name</span>
+						}
+					</div>
+					<button
+						class="px-6 py-2 rounded-xl bg-white text-black font-Ubuntu text-xl hover:bg-slate-300">Downloand
+						CV <i class="fa fa-download"></i></button>
+				</div>
+			</div>
 		</div>
-		<div class="text-white flex flex-col gap-8">
-			<div>
+		<div>
+			<div class="flex flex-col gap-2">
 				<span class="text-Brand1">&lt;h1&gt;</span>
-				<div class="text-6xl px-2">
+				<div class="text-5xl px-2 pl-5 flex flex-col items-start self-stretch">
 					<h1>Hey</h1>
 					<h1>I'm <span class="text-Brand1">Geraldson</span></h1>
 					<h1>Full-Stack Developer</h1>
@@ -18,16 +36,34 @@
 			</div>
 			<div class="flex flex-col gap-1">
 				<span class="text-Brand1">&lt;p&gt;</span>
-				<p class="pl-5">I help business grow by crafting amazing web experiences. If you’re looking for a
+				<p class="pl-5 max-w-xl">I help business grow by crafting amazing web experiences. If you’re
+					looking
+					for a
 					developer that likes to get stuff done.</p>
 				<span class="text-Brand1">&lt;/p&gt;</span>
-				<a href="#">Let's Talk <i class="fa fa-mail"></i></a>
+				<a class="text-Brand1 text-2xl" href="#">Let's Talk <i
+						class="fa fa-envelope hover:text-orange-500"></i></a>
+			</div>
+		</div>
+		<div class="text-white flex gap-16">
+			<div class=" inline-flex flex-col  gap-12 py-10 px-4 bg-BG2 rounded-3xl skills-summary">
+				<div class="details-container">
+					<span class="text-Brand1 text-5xl">
+						@skills.Where(x => x.Type == SkillType.Language.ToString()).Count()</span>
+					<p>Programming Languajes</p>
+				</div>
+				<div class="details-container">
+					<span class="text-Brand1 text-5xl">
+						@skills.Where(x => x.Type != SkillType.Language.ToString()).Count()</span>
+					<p>Development Tools</p>
+				</div>
+				<div class="details-container">
+					<span class="text-Brand1 text-5xl">
+						@YearsOfExperience</span>
+					<p>Years of Experience</p>
+				</div>
+
 			</div>
 		</div>
 	</div>
 </div>
-
-
-@code {
-
-}
