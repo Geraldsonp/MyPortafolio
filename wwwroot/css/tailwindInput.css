@@ -8,6 +8,13 @@
     font-family: 'IBM Plex Mono', monospace;
   }
 }
+#app{
+	@apply container 
+}
+
+body{
+	@apply bg-BG1 flex justify-center
+}
 
 .BGTextU {
 	@apply  text-9xl font-normal
@@ -27,10 +34,11 @@
 }
 
 .form-input-cv label {
-		@apply text-Brand1 
-	}
+	@apply text-Brand1 
+}
 
-	.form-input-cv input {
-		@apply border-Brand1 bg-transparent border-b active:border-b-2 focus:border-b-2 focus:border-Brand1 focus:outline-none text-white
-	}
+.form-input-cv input {
+	@apply border-Brand1 bg-transparent border-b active:border-b-2 focus:border-b-2 focus:border-Brand1 focus:outline-none text-white
+}
 	
+
