@@ -25,3 +25,12 @@
 .about-section{
 	background: url('../public/images/tile_background.png') 
 }
+
+.form-input-cv label {
+		@apply text-Brand1 
+	}
+
+	.form-input-cv input {
+		@apply border-Brand1 bg-transparent border-b active:border-b-2 focus:border-b-2 focus:border-Brand1 focus:outline-none text-white
+	}
+	
