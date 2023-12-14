@@ -2,29 +2,45 @@
 	"Name": "Geraldson",
 	"Age": 28,
 	"Profession": "Software Engineer",
+	"WorkingSince": "01/01/2022",
 	"About": "I am a software engineer with 5 years of experience in the field. I have worked with many technologies, such as Java, C#, Python, Javascript, Angular, React, Node, etc. I am currently working as a fullstack developer at a company called 4all.",
 	"Skill": [
-		"Java",
-		"C#",
-		"Python",
-		"Javascript",
-		"Angular",
-		"React",
-		"Node",
-		"SQL",
-		"NoSQL",
-		"Git",
-		"Docker",
-		"Kubernetes",
-		"AWS",
-		"Azure",
-		"GCP",
-		"Linux",
-		"Windows"
+		{
+			"Name": "C#",
+			"Type": "Language"
+		},
+		{
+			"Name": "Javascript",
+			"Type": "Language"
+		},
+		{
+			"Name": "NodeJs",
+			"Type": "Tool"
+		},
+		{
+			"Name": "Docker",
+			"Type": "Tool"
+		},
+		{
+			"Name": "Azure",
+			"Type": "Tool"
+		},
+		{
+			"Name": "TailwindCSS",
+			"Type": "Tool"
+		},
+		{
+			"Name": "CSS",
+			"Type": "Tool"
+		},
+		{
+			"Name": "HTML",
+			"Type": "Tool"
+		}
 	],
 	"Education": [
 		{
-			"Name": "Universidade Federal de Santa Catarina",
+			"Institution": "Universidade Federal de Santa Catarina",
 			"Course": "Computer Science",
 			"Start": "2010",
 			"End": "2015"
@@ -52,5 +68,14 @@
 			"End": "2016",
 			"Description": "I worked as a fullstack developer at a company called Dígitro. I worked with technologies such as Java, Spring, Angular, React, Node, Docker, Kubernetes, AWS, Azure, GCP, etc."
 		}
+	],
+	"Projects": [
+		{
+			"Name": "Geraldson",
+			"Description": "This is my personal website. It was built using React and Node.",
+			"Link": "",
+			"Image": ""
+		}
 	]
 }
+

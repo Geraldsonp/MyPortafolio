@@ -13,7 +13,7 @@
 					<p><i class="fa fa-location-dot"></i> Santo Domingo, Rep.Dom</p>
 					<p><i class="fa fa-briefcase"></i> Full-time / Freelance</p>
 					<div class="flex gap-1">
-						@foreach (var skill in _skills)
+						@foreach (var skill in Skills.Where(x => x.Type == SkillType.Language.ToString()))
 						{
 							<span class="skill-pill">@skill.Name</span>
 						}
@@ -49,12 +49,12 @@
 			<div class=" inline-flex flex-col  gap-12 py-10 px-4 bg-BG2 rounded-3xl skills-summary">
 				<div class="details-container">
 					<span class="text-Brand1 text-5xl">
-						@skills.Where(x => x.Type == SkillType.Language.ToString()).Count()</span>
+						@Skills.Where(x => x.Type == SkillType.Language.ToString()).Count()</span>
 					<p>Programming Languajes</p>
 				</div>
 				<div class="details-container">
 					<span class="text-Brand1 text-5xl">
-						@skills.Where(x => x.Type != SkillType.Language.ToString()).Count()</span>
+						@Skills.Where(x => x.Type != SkillType.Language.ToString()).Count()</span>
 					<p>Development Tools</p>
 				</div>
 				<div class="details-container">
