@@ -53,6 +53,15 @@ namespace MyPortafolio.Models
 		public string Image { get; set; }
 	}
 
+	public class Social
+	{
+		[JsonPropertyName("Name")]
+		public string Name { get; set; }
+
+		[JsonPropertyName("Link")]
+		public string Link { get; set; }
+	}
+
 	public class Profile
 	{
 		[JsonPropertyName("Name")]
@@ -62,7 +71,7 @@ namespace MyPortafolio.Models
 		public int Age { get; set; }
 
 		[JsonPropertyName("WorkingSince")]
-		public DateTime WorkingSince { get; set; }
+		public string WorkingSince { get; set; } = "2023";
 
 		[JsonPropertyName("Profession")]
 		public string Profession { get; set; }
@@ -71,16 +80,19 @@ namespace MyPortafolio.Models
 		public string About { get; set; }
 
 		[JsonPropertyName("Skill")]
-		public List<Skill> Skill { get; set; }
+		public List<Skill> Skill { get; set; } = new List<Skill>();
 
 		[JsonPropertyName("Education")]
-		public List<Education> Education { get; set; }
+		public List<Education> Education { get; set; } = new List<Education>();
 
 		[JsonPropertyName("Experience")]
-		public List<Experience> Experience { get; set; }
+		public List<Experience> Experience { get; set; } = new List<Experience>();
 
 		[JsonPropertyName("Projects")]
-		public List<Project> Projects { get; set; }
+		public List<Project> Projects { get; set; } = new List<Project>();
+
+		[JsonPropertyName("Social")]
+		public List<Social> Social { get; set; } = new List<Social>();
 	}
 
 

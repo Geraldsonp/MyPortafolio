@@ -1,16 +1,18 @@
 ﻿@page "/"
 
-<HeroSection Skills="Profile.Skill" WorkingSince="Profile.WorkingSince" />
+<HeroSection Skills="Profile.Skill" WorkingSince="@Profile.WorkingSince" />
 <About Description="@Profile.About" />
 <Contact />
 
 @code {
 	[Inject] HttpClient Http { get; set; }
-	public Models.Profile Profile { get; set; }
+	public Models.Profile Profile { get; set; } = new Models.Profile();
 
 	protected override async Task OnInitializedAsync()
 	{
 		//load data from json file in sample data folder
-		Profile = await Http.GetFromJsonAsync<Models.Profile>("sample-data/profile.json");
+		Profile = await Http.GetFromJsonAsync<Models.Profile>("sample-data/profileInfo.json");
+		Console.WriteLine(Profile.Skill.Count);
+		Console.WriteLine(Profile.WorkingSince);
 	}
 }

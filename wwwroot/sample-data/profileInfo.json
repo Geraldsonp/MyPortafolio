@@ -2,7 +2,7 @@
 	"Name": "Geraldson",
 	"Age": 28,
 	"Profession": "Software Engineer",
-	"WorkingSince": "01/01/2022",
+	"WorkingSince": "2022",
 	"About": "I am a software engineer with 5 years of experience in the field. I have worked with many technologies, such as Java, C#, Python, Javascript, Angular, React, Node, etc. I am currently working as a fullstack developer at a company called 4all.",
 	"Skill": [
 		{
@@ -35,6 +35,10 @@
 		},
 		{
 			"Name": "HTML",
+			"Type": "Tool"
+		},
+		{
+			"Name": "Blazor",
 			"Type": "Tool"
 		}
 	],
@@ -75,6 +79,28 @@
 			"Description": "This is my personal website. It was built using React and Node.",
 			"Link": "",
 			"Image": ""
+		}
+	],
+	"Socials": [
+		{
+			"Name": "Github",
+			"Link": ""
+		},
+		{
+			"Name": "Linkedin",
+			"Link": ""
+		},
+		{
+			"Name": "Instagram",
+			"Link": ""
+		},
+		{
+			"Name": "Facebook",
+			"Link": ""
+		},
+		{
+			"Name": "Email",
+			"Link": ""
 		}
 	]
 }
