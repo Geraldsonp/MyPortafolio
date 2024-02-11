@@ -1,3 +1,26 @@
 ﻿@page "/"
 
-<HeroSection />
+<CascadingValue Value="Profile">
+    <HeroSection />
+
+</CascadingValue>
+
+
+@code {
+    [Inject]
+    HttpClient Http { get; set; }
+    public Models.Profile Profile { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var profile = await Http.GetFromJsonAsync<Models.Profile>("./ProfileInfo.json");
+        if (profile != null)
+        {
+            Profile = profile;
+        }
+        else
+        {
+            Profile = new Models.Profile();
+        }
+    }
+}

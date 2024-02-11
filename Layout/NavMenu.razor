@@ -3,7 +3,7 @@
 		<div class="flex justify-start items-center gap-2">
 			<span class="C text-cyan-400 text-[32px] font-medium font-['IBM Plex Mono'] capitalize leading-[42px]">
 				&lt;G/&gt;</span>
-			<p class="text-white text-[32px] font-medium font-['IBM Plex Mono'] capitalize leading-[42px]">Geraldson
+			<p class="text-white text-[32px] font-medium font-['IBM Plex Mono'] capitalize leading-[42px]">@Profile.Name
 			</p>
 		</div>
 		<div class="NavBar flex justify-start items-center gap-16">
@@ -55,12 +55,8 @@
 
 
 @code {
-	private bool collapseNavMenu = true;
+    [CascadingParameter]
+    public Models.Profile Profile { get; set; } = new Models.Profile();
 
-	private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-	private void ToggleNavMenu()
-	{
-		collapseNavMenu = !collapseNavMenu;
-	}
 }

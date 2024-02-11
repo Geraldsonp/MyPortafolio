@@ -1,10 +1,30 @@
 ﻿@inherits LayoutComponentBase
-<div class=" flex-col justify-start items-start inline-flex w-full bg-gray-800 ">
-    <NavMenu />
-    <hr class="border-gray-600" />
-    <main>
-        <article>
-            @Body
-        </article>
-    </main>
-</div>
+<CascadingValue Value="Profile">
+    <div class=" flex-col justify-start items-start inline-flex w-full max-w-full bg-gray-800 ">
+        <NavMenu />
+        <hr class="border-gray-600" />
+        <main>
+            <article>
+                @Body
+            </article>
+        </main>
+    </div>
+</CascadingValue>
+@code {
+    [Inject]
+    HttpClient Http { get; set; }
+    public Models.Profile Profile { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var profile = await Http.GetFromJsonAsync<Models.Profile>("./ProfileInfo.json");
+        if (profile != null)
+        {
+            Profile = profile;
+        }
+        else
+        {
+            Profile = new Models.Profile();
+        }
+    }
+}

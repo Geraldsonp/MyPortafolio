@@ -1,15 +1,24 @@
 using Microsoft.AspNetCore.Components;
+using MyPortafolio.Models;
 
 namespace MyPortafolio.Components
 {
 	public partial class HeroSection
 	{
-		[Parameter]
-		public IEnumerable<Skill> Skills { get; set; } = new List<Skill>();
+		[CascadingParameter]
+		public Profile Profile { get; set; }
 
 		[Parameter]
 		public string WorkingSince { get; set; } = "2022";
 		private string YearsOfExperience => ((DateTime.Now - DateTime.Parse($"{WorkingSince}-01-01")).TotalDays / 365).ToString("0");
+
+		private string GetEmail()
+		{
+			if (Profile == null)
+				return string.Empty;
+
+			return Profile.Social.Where(s => s.Name.ToLower() == "email").FirstOrDefault()?.Link ?? string.Empty;
+		}
 
 	}
 	public class Skill

@@ -1,4 +1,4 @@
-<div class="px-32 pt-16 pb-32 bg-gray-800 justify-center items-start inline-flex">
+<div class="max-w-full px-32 pt-16 pb-32 bg-gray-800 justify-center items-start inline-flex">
 	<MenuSideBar />
 	<div class="Container grow shrink basis-0 flex-col justify-center items-center gap-16 inline-flex">
 		<div class=" self-stretch justify-center items-center inline-flex mb-10">
@@ -14,10 +14,10 @@
 						<figcaption class="Name flex-col justify-start items-center flex">
 							<h3
 								class="Sinan text-white text-3xl font-medium font-['IBM Plex Mono'] capitalize leading-10">
-								Geraldson</h3>
+								@Profile?.Name</h3>
 							<div
 								class="FullStackDeveloper text-white text-sm font-normal font-['IBM Plex Mono'] leading-none">
-								Full-stack developer</div>
+								@Profile.Profession</div>
 						</figcaption>
 					</figure>
 
@@ -27,7 +27,7 @@
 								email</span>
 							<a href="mailto:abdurrahman_sinan@hotmail.com"
 								class="email-link text-white text-sm  leading-none">
-								abdurrahman_sinan@hotmail.com
+								@GetEmail()
 							</a>
 						</address>
 						<div class="location flex justify-center items-center gap-4">
@@ -139,3 +139,4 @@
 		</div>
 	</div>
 </div>
+
