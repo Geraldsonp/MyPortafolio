@@ -1,0 +1,107 @@
+{
+	"Name": "Geraldson",
+	"Age": 28,
+	"Profession": "Software Engineer",
+	"WorkingSince": "2022",
+	"About": "I am a software engineer with 5 years of experience in the field. I have worked with many technologies, such as Java, C#, Python, Javascript, Angular, React, Node, etc. I am currently working as a fullstack developer at a company called 4all.",
+	"Skill": [
+		{
+			"Name": "C#",
+			"Type": "Language"
+		},
+		{
+			"Name": "Javascript",
+			"Type": "Language"
+		},
+		{
+			"Name": "NodeJs",
+			"Type": "Tool"
+		},
+		{
+			"Name": "Docker",
+			"Type": "Tool"
+		},
+		{
+			"Name": "Azure",
+			"Type": "Tool"
+		},
+		{
+			"Name": "TailwindCSS",
+			"Type": "Tool"
+		},
+		{
+			"Name": "CSS",
+			"Type": "Tool"
+		},
+		{
+			"Name": "HTML",
+			"Type": "Tool"
+		},
+		{
+			"Name": "Blazor",
+			"Type": "Tool"
+		}
+	],
+	"Education": [
+		{
+			"Institution": "Universidade Federal de Santa Catarina",
+			"Course": "Computer Science",
+			"Start": "2010",
+			"End": "2015"
+		}
+	],
+	"Experience": [
+		{
+			"Company": "4all",
+			"Position": "Software Engineer",
+			"Start": "2018",
+			"End": "Present",
+			"Description": "I am currently working as a fullstack developer at a company called 4all. I work with technologies such as Java, Spring, Angular, React, Node, Docker, Kubernetes, AWS, Azure, GCP, etc."
+		},
+		{
+			"Company": "Softplan",
+			"Position": "Software Engineer",
+			"Start": "2016",
+			"End": "2018",
+			"Description": "I worked as a fullstack developer at a company called Softplan. I worked with technologies such as Java, Spring, Angular, React, Node, Docker, Kubernetes, AWS, Azure, GCP, etc."
+		},
+		{
+			"Company": "Dígitro",
+			"Position": "Software Engineer",
+			"Start": "2015",
+			"End": "2016",
+			"Description": "I worked as a fullstack developer at a company called Dígitro. I worked with technologies such as Java, Spring, Angular, React, Node, Docker, Kubernetes, AWS, Azure, GCP, etc."
+		}
+	],
+	"Projects": [
+		{
+			"Name": "Geraldson",
+			"Description": "This is my personal website. It was built using React and Node.",
+			"Link": "",
+			"Image": ""
+		}
+	],
+	"Socials": [
+		{
+			"Name": "Github",
+			"Link": ""
+		},
+		{
+			"Name": "Linkedin",
+			"Link": ""
+		},
+		{
+			"Name": "Instagram",
+			"Link": ""
+		},
+		{
+			"Name": "Facebook",
+			"Link": ""
+		},
+		{
+			"Name": "Email",
+			"Link": ""
+		}
+	]
+}
+

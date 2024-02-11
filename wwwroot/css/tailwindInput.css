@@ -8,6 +8,13 @@
     font-family: 'IBM Plex Mono', monospace;
   }
 }
+#app{
+	@apply container 
+}
+
+body{
+	@apply bg-BG1 flex justify-center
+}
 
 .BGTextU {
 	@apply  text-9xl font-normal

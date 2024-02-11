@@ -762,8 +762,8 @@ html {
   align-items: flex-start;
 }
 
-.items-center{
-  align-items: center;
+.justify-start{
+  justify-content: flex-start;
 }
 
 .items-baseline{
@@ -822,12 +822,20 @@ html {
   gap: 2rem;
 }
 
-.self-start{
-  align-self: flex-start;
+.self-center{
+  align-self: center;
 }
 
 .self-stretch{
   align-self: stretch;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.break-keep{
+  word-break: keep-all;
 }
 
 .rounded-3xl{
@@ -1279,6 +1287,10 @@ html {
   vertical-align: middle;
 }
 
+.align-middle{
+  vertical-align: middle;
+}
+
 .font-IBM{
   font-family: "IBM Plex Mono", monospace;
 }
@@ -1303,11 +1315,6 @@ html {
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-5xl{
@@ -1552,6 +1559,14 @@ html {
 }
 
 @media (min-width: 1280px){
+  .xl\:flex-row{
+    flex-direction: row;
+  }
+
+  .xl\:gap-52{
+    gap: 13rem;
+  }
+
   .xl\:px-24{
     padding-left: 4.5rem;
     padding-right: 4.5rem;
