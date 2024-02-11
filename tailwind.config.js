@@ -18,7 +18,17 @@ module.exports = {
 			fontFamily: {
 				'IBM': '"IBM Plex Mono", monospace',
 				'Ubuntu': 'Ubuntu, sans- serif'
-			}
+			},
+			spacing: {
+				'12': '1.5rem',
+				'14': '2rem',
+				'16': '2.5rem',
+				'20': '3.5rem',
+				'24': '4.5rem',
+				'32': '7.5rem',
+				'40': '9.5rem',
+				'48': '11.5rem',
+			  }
 		}
 	},
 	plugins: [],

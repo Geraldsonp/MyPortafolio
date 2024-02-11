@@ -3,7 +3,7 @@
     "tailwindcss": "^3.3.5"
   },
   "scripts": {
-    "build:css": "tailwindcss build wwwroot/css/tailwindInput.css -o wwwroot/css/app.css",
-    "dev:css": "tailwindcss build wwwroot/css/tailwindInput.css -o wwwroot/css/app.css --watch"
+    "build-css": "tailwindcss build wwwroot/css/tailwindInput.css -o wwwroot/css/app.css",
+    "watch-css": "tailwindcss build wwwroot/css/tailwindInput.css -o wwwroot/css/app.css --watch"
   }
 }

@@ -1,68 +1,140 @@
-<div class=" bg-BG1 px-4 xl:px-24 flex flex-wrap flex-col gap-16 py-8 text-white">
-	<h1 class="font-Ubuntu text-8xl capitalize text-Brand1 text-center">Developer</h1>
-	<div class="flex flex-wrap justify-center items-center content-center self-stretch  gap-20">
-		<div class="flex flex-col justify-center gap-8 border-4 border-white p-4 rounded-tl-3xl rounded-br-3xl">
-			<div class="flex flex-col gap-8">
-				<div class="flex flex-col gap-4 justify-center items-center">
-					<img src="./profilePic.jpeg" class="w-24 rounded-full" alt="">
-					<h2 class="font-medium font-IBM text-3xl">Geraldson</h2>
-					<p>Full-stack developer</p>
-				</div>
-				<div class="flex gap-4 flex-col ">
-					<p><i class="fa fa-envelope"></i> Geraldson.a.p@gmail.com</p>
-					<p><i class="fa fa-location-dot"></i> Santo Domingo, Rep.Dom</p>
-					<p><i class="fa fa-briefcase"></i> Full-time / Freelance</p>
-					<div class="flex flex-wrap gap-1">
-						@foreach (var skill in _skills)
-						{
-							<span class="skill-pill">@skill.Name</span>
-						}
-					</div>
-					<button
-						class="px-6 py-2 rounded-xl bg-white text-black font-Ubuntu text-xl hover:bg-slate-300">Downloand
-						CV <i class="fa fa-download"></i></button>
-				</div>
-			</div>
+<div class="px-32 pt-16 pb-32 bg-gray-800 justify-center items-start inline-flex">
+	<MenuSideBar />
+	<div class="Container grow shrink basis-0 flex-col justify-center items-center gap-16 inline-flex">
+		<div class=" self-stretch justify-center items-center inline-flex mb-10">
+			<h2 class="Developer text-teal-200 text-9xl font-normal font-['Ubuntu'] capitalize leading-10">Developer
+			</h2>
 		</div>
-		<div>
-			<div class="flex flex-col gap-2">
-				<span class="text-Brand1">&lt;h1&gt;</span>
-				<div class="text-5xl px-2 pl-5 flex flex-col items-start self-stretch">
-					<h1>Hey</h1>
-					<h1>I'm <span class="text-Brand1">Geraldson</span></h1>
-					<h1>Full-Stack Developer</h1>
-				</div>
-				<span class="text-Brand1">&lt;/h1&gt;</span>
-			</div>
-			<div class="flex flex-col gap-1">
-				<span class="text-Brand1">&lt;p&gt;</span>
-				<p class="pl-5 max-w-xl">I help business grow by crafting amazing web experiences. If you’re
-					looking
-					for a
-					developer that likes to get stuff done.</p>
-				<span class="text-Brand1">&lt;/p&gt;</span>
-				<a class="text-Brand1 text-2xl" href="#">Let's Talk <i
-						class="fa fa-envelope hover:text-orange-500"></i></a>
-			</div>
-		</div>
-		<div class="text-white flex gap-16">
-			<div class=" inline-flex flex-col  gap-12 py-10 px-4 bg-BG2 rounded-3xl skills-summary">
-				<div class="details-container">
-					<span class="text-Brand1 text-5xl">
-						@skills.Where(x => x.Type == SkillType.Language.ToString()).Count()</span>
-					<p>Programming Languajes</p>
-				</div>
-				<div class="details-container">
-					<span class="text-Brand1 text-5xl">
-						@skills.Where(x => x.Type != SkillType.Language.ToString()).Count()</span>
-					<p>Development Tools</p>
-				</div>
-				<div class="details-container">
-					<span class="text-Brand1 text-5xl">
-						@YearsOfExperience</span>
-					<p>Years of Experience</p>
-				</div>
+		<div class="Content self-stretch px-32 justify-center items-center gap-32 inline-flex">
+			<div
+				class="Left p-6  rounded-tl-3xl rounded-br-3xl shadow border-4 border-white flex-col justify-center items-start gap-4">
+				<div class="Content flex-col justify-start items-center gap-8 flex">
+					<figure class="PhotoName flex-col justify-start items-center gap-4 flex">
+						<img class="ProfilePhoto rounded-3xl border-2 border-cyan-400 h-32" src="./profilePic.jpeg" />
+						<figcaption class="Name flex-col justify-start items-center flex">
+							<h3
+								class="Sinan text-white text-3xl font-medium font-['IBM Plex Mono'] capitalize leading-10">
+								Geraldson</h3>
+							<div
+								class="FullStackDeveloper text-white text-sm font-normal font-['IBM Plex Mono'] leading-none">
+								Full-stack developer</div>
+						</figcaption>
+					</figure>
 
+					<div class=" flex-col justify-start items-start gap-4 flex">
+						<address class="email flex justify-center items-center gap-4">
+							<span class="material-symbols-outlined text-sm text-white">
+								email</span>
+							<a href="mailto:abdurrahman_sinan@hotmail.com"
+								class="email-link text-white text-sm  leading-none">
+								abdurrahman_sinan@hotmail.com
+							</a>
+						</address>
+						<div class="location flex justify-center items-center gap-4">
+							<span class="material-symbols-outlined text-sm text-white">
+								location_on</span>
+							<p class="location-name text-white text-sm leading-none">
+								Turkey
+							</p>
+						</div>
+						<div class="freelancer flex justify-center items-center gap-4">
+							<span class="material-symbols-outlined text-sm text-white">
+								work</span>
+							<p class="freelancer-status text-white text-sm font-normal font-mono leading-none">
+								Full-time / Freelancer
+							</p>
+						</div>
+						<div class="website flex justify-center items-center gap-4">
+							<span class="material-symbols-outlined text-sm text-white">
+								public</span>
+							<a href="http://www.sinantokmak.com"
+								class="website-link text-white text-sm font-normal font-mono leading-none">
+								www.sinantokmak.com
+							</a>
+						</div>
+					</div>
+					<div class="Label justify-start items-start gap-4 inline-flex">
+						<div class="Html px-2 bg-cyan-400 rounded-lg justify-center items-center gap-4 flex">
+							<div class="Html text-gray-800 text-sm font-normal font-['IBM Plex Mono'] leading-none">
+								HTML</div>
+						</div>
+						<div class="Css px-2 bg-cyan-400 rounded-lg justify-center items-center gap-4 flex">
+							<div class="Css text-gray-800 text-sm font-normal font-['IBM Plex Mono'] leading-none">
+								CSS</div>
+						</div>
+						<div class="Js px-2 bg-cyan-400 rounded-lg justify-center items-center gap-4 flex">
+							<div class="Js text-gray-800 text-sm font-normal font-['IBM Plex Mono'] leading-none">JS
+							</div>
+						</div>
+						<div class="React px-2 bg-cyan-400 rounded-lg justify-center items-center gap-4 flex">
+							<div class="React text-gray-800 text-sm font-normal font-['IBM Plex Mono'] leading-none">
+								REACT</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex justify-center py-2">
+					<button type="button"
+						class="ButtonText text-xl font-normal font-['Ubuntu'] capitalize leading-normal bg-white px-3 py-2 rounded-xl">
+						Download CV <span class="material-symbols-outlined text-xl  ">
+							download</span></button>
+				</div>
+			</div>
+			<div class="Right justify-center items-center flex">
+				<div class="Info flex-col justify-start items-start gap-8 flex">
+					<div class="Title flex-col flex">
+						<div class="H1 text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none pb-5">
+							&lt;h1&gt;
+						</div>
+						<div class="Text self-stretch px-4 text-white text-5xl">
+							<h2>Hey, <span>Im Geraldson</span></h2>
+							<h2>Full-stack Developer</h2>
+							<div class="H1 text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none">
+								&lt;h1/&gt;
+							</div>
+						</div>
+					</div>
+					<div class="Para self-stretch h-40 flex-col justify-start items-start gap-4 flex">
+						<div class="P text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none">
+							&lt;p&gt;
+						</div>
+						<div class="Text px-6 justify-start items-start inline-flex">
+							<p class="w-96 text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
+								I help business grow by crafting amazing web experiences. If you’re looking for a
+								developer that likes to get stuff done,</p>
+						</div>
+						<div class="P text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none">
+							&lt;p/&gt;
+						</div>
+						<div class="Cta pl-6 justify-start items-center gap-4 inline-flex">
+							<div
+								class="LetSTalk text-cyan-400 text-3xl font-medium font-['IBM Plex Mono'] capitalize leading-10">
+								let’s talk</div>
+							<span class="material-symbols-outlined text-cyan-400 text-3xl">
+								arrow_right_alt</span>
+						</div>
+					</div>
+				</div>
+				<div
+					class="Highlights px-8 py-12 bg-zinc-900 rounded-3xl shadow flex-col justify-center items-start gap-12 inline-flex">
+					<div class="Language justify-start items-center gap-4 inline-flex">
+						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">4
+						</p>
+						<p class="Language text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
+							Programming Language</p>
+					</div>
+					<div class="Language justify-start items-center gap-4 inline-flex">
+						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">4
+						</p>
+						<p class="Language text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
+							Programming Language</p>
+					</div>
+					<div class="Language justify-start items-center gap-4 inline-flex">
+						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">4
+						</p>
+						<p class="Language text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
+							Programming Language</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,57 +1,86 @@
 ﻿@page "/weather"
-@inject HttpClient Http
 
-<PageTitle>Weather</PageTitle>
-
-<h1>Weather</h1>
-
-<p>This component demonstrates fetching data from the server.</p>
-
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-
-@code {
-    private WeatherForecast[]? forecasts;
-
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
-    }
-
-    public class WeatherForecast
-    {
-        public DateOnly Date { get; set; }
-
-        public int TemperatureC { get; set; }
-
-        public string? Summary { get; set; }
-
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-    }
-}
+<div class="self-stretch px-32 pt-16 pb-32 bg-gray-800 justify-center items-start inline-flex">
+    <MenuSideBar />
+    <div class="grow shrink basis-0 flex-col justify-center items-center gap-16 inline-flex">
+        <div class="self-stretch justify-center items-center inline-flex">
+            <div class="text-teal-200 text-9xl font-normal font-['Ubuntu'] capitalize leading-10">developer</div>
+        </div>
+        <div class="self-stretch px-32 justify-center items-center gap-32 inline-flex">
+            <PersonalInfoSection />
+            <div class="justify-center items-center flex">
+                <div class="flex-col justify-start items-start gap-8 inline-flex">
+                    <div class="self-stretch h-60 flex-col justify-start items-start flex">
+                        <div class="text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none"></div>
+                        <div class="self-stretch h-52 px-4 flex-col justify-start items-start flex">
+                            <div class="text-white text-6xl font-normal font-['Ubuntu'] capitalize leading-10">Hey</div>
+                            <div><span style="text-white text-6xl font-normal font-['Ubuntu'] capitalize leading-10">I’m
+                                </span><span
+                                    style="text-cyan-400 text-6xl font-normal font-['Ubuntu'] capitalize leading-10">Sinan</span><span
+                                    style="text-white text-6xl font-normal font-['Ubuntu'] capitalize leading-10">,</span>
+                            </div>
+                            <div class="justify-start items-baseline gap-4 inline-flex">
+                                <div class="text-white text-6xl font-normal font-['Ubuntu'] capitalize leading-10">
+                                    Full-stack developer</div>
+                                <div class="text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="self-stretch h-40 flex-col justify-start items-start gap-4 flex">
+                        <div class="text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none"></div>
+                        <div class="px-6 justify-start items-start inline-flex">
+                            <div class="w-96 text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">I
+                                help business grow by crafting amazing web experiences. If you’re looking for a
+                                developer that likes to get stuff done,</div>
+                        </div>
+                        <div class="text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none"></div>
+                        <div class="pl-6 justify-start items-center gap-4 inline-flex">
+                            <div
+                                class="text-cyan-400 text-3xl font-medium font-['IBM Plex Mono'] capitalize leading-10">
+                                let’s talk</div>
+                            <div class="p-2 bg-zinc-700 rounded-3xl justify-start items-start flex">
+                                <div class="w-6 h-6 justify-center items-center flex">
+                                    <div class="w-6 h-6 px-px py-0.5 justify-center items-center inline-flex"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="px-8 py-12 bg-zinc-900 rounded-3xl shadow flex-col justify-center items-start gap-12 inline-flex">
+                    <div class="justify-start items-center gap-4 inline-flex">
+                        <div class="text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">4
+                        </div>
+                        <div class="flex-col justify-center items-start inline-flex">
+                            <div class="text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
+                                Programming</div>
+                            <div class="text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">Language
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-start items-center gap-4 inline-flex">
+                        <div class="text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">6
+                        </div>
+                        <div class="flex-col justify-center items-start inline-flex">
+                            <div class="text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
+                                Development</div>
+                            <div class="text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">Tools
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-start items-center gap-4 inline-flex">
+                        <p class="text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">8
+                        </p>
+                        <div class="flex-col justify-center items-start inline-flex">
+                            <div class="text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">Years of
+                            </div>
+                            <div class="text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
+                                Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

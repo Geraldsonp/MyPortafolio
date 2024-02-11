@@ -25,3 +25,24 @@
 .about-section{
 	background: url('../public/images/tile_background.png') 
 }
+
+.module-title{
+	@apply text-4xl font-normal font-Ubuntu text-Brand1 break-words text-center
+}
+	
+.skills-section {
+		background: linear-gradient(5deg, rgba(75, 75, 75, 0.671), rgba(65, 65, 65, 0.836)), url('../public/images/skills-bg.jpg');
+		background-size: cover;
+	}
+
+.skill-subtitle{
+	@apply text-sm font-normal font-IBM text-white break-words text-center
+}
+
+.skill-circle{
+	@apply rounded-full p-4 relative
+}
+
+.skill-circle p {
+	@apply absolute w-16 text-xs bottom-[-20px] text-white font-IBM text-center
+}

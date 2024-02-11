@@ -1,28 +1,58 @@
-﻿<div class="bg-BG1 px-4 xl:px-24 flex flex-col items-center self-stretch text-white">
-	<div class="flex flex-wrap py-12 justify-between items-center self-stretch text-2xl">
-		<div class="text-3xl font-medium ">
-			<p><span class="text-Brand1 ">&lt;C/&gt;</span> Geraldson Perez</p>
+﻿<header class="w-full px-32 flex flex-col justify-start items-center">
+	<nav class="Container self-stretch py-16 justify-between items-center flex">
+		<div class="flex justify-start items-center gap-2">
+			<span class="C text-cyan-400 text-[32px] font-medium font-['IBM Plex Mono'] capitalize leading-[42px]">
+				&lt;G/&gt;</span>
+			<p class="text-white text-[32px] font-medium font-['IBM Plex Mono'] capitalize leading-[42px]">Geraldson
+			</p>
 		</div>
-		<div class="flex flex-wrap items-center gap-10">
-			<a href="#Home">Home</a>
-			<a href="#Home">Projects</a>
-			<div class="relative text-black text-base">
-				<input type="text" class="rounded-xl pl-3 pr-8 py-1" />
-				<i class="fa fa-search absolute right-3 top-[25%]"></i>
-			</div>
-			<div>
-				<i class="fa-brands fa-instagram text-Brand1"></i> Instagram
-			</div>
-			<div>
-				<i class="fa-brands fa-linkedin text-Brand1"></i> LinkedIn
-			</div>
-			<div>
-				<i class="fa-brands fa-github text-Brand1"></i> GitHub
-			</div>
-		</div>
-	</div>
+		<div class="NavBar flex justify-start items-center gap-16">
+			<div class="Menu flex justify-start items-start gap-8">
+				<a href="/"
+					class="Home text-cyan-400 text-2xl font-normal font-['IBM Plex Mono'] capitalize leading-loose">
+					Home</a>
+				<a href="/blogs"
+					class="Blogs text-white text-2xl font-normal font-['IBM Plex Mono'] capitalize leading-loose">Blogs
+				</a>
 
-</div>
+			</div>
+			<div class="Right flex justify-start items-center gap-16">
+				<div class="Search pl-8 pr-4 py-1.5 bg-white rounded-3xl justify-start items-start flex">
+					<input type="text" class="w-full h-full bg-transparent focus:outline-none" />
+					<span class="material-symbols-outlined">
+						search
+					</span>
+				</div>
+
+				<div class="Media flex justify-start items-start gap-8">
+					<a
+						class="flex justify-start items-center gap-2 text-white text-base font-normal font-['IBM Plex Mono'] capitalize leading-tight hover:cursor-pointer">
+						<i class="fa-brands fa-instagram text-2xl  text-white"></i>
+						instagram
+					</a>
+					<a
+						class="flex justify-start items-center gap-2 text-white text-base font-normal font-['IBM Plex Mono'] capitalize leading-tight hover:cursor-pointer">
+						<i class="fa-brands fa-discord  text-2xl  text-white"></i>
+
+						Discord
+
+					</a>
+					<a
+						class=" flex justify-start items-center gap-2 text-white text-base font-normal font-['IBM Plex Mono'] capitalize leading-tight hover:cursor-pointer">
+						<i class="fa-brands fa-github text-2xl  text-white"></i>
+
+						Github
+
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="Line self-stretch justify-center items-center">
+		<div class="Line21 grow shrink basis-0 h-[0px] border border-zinc-700"></div>
+	</div>
+</header>
+
 
 @code {
 	private bool collapseNavMenu = true;
