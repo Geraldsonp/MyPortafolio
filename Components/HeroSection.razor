@@ -1,8 +1,8 @@
-<div class="max-w-full px-32 pt-16 pb-32 bg-gray-800 justify-center items-start inline-flex">
+<div class=" px-16 pt-16 pb-32 bg-gray-800 justify-center items-start inline-flex">
 	<MenuSideBar />
 	<div class="Container grow shrink basis-0 flex-col justify-center items-center gap-16 inline-flex">
 		<div class=" self-stretch justify-center items-center inline-flex mb-10">
-			<h2 class="Developer text-teal-200 text-9xl font-normal font-['Ubuntu'] capitalize leading-10">Developer
+			<h2 class="Developer text-teal-200 text-9xl font-normal font-['Ubuntu'] capitalize leading-10">Web Developer
 			</h2>
 		</div>
 		<div class="Content self-stretch px-32 justify-center items-center gap-32 inline-flex">
@@ -27,14 +27,14 @@
 								email</span>
 							<a href="mailto:abdurrahman_sinan@hotmail.com"
 								class="email-link text-white text-sm  leading-none">
-								@GetEmail()
+								@Email
 							</a>
 						</address>
 						<div class="location flex justify-center items-center gap-4">
 							<span class="material-symbols-outlined text-sm text-white">
 								location_on</span>
 							<p class="location-name text-white text-sm leading-none">
-								Turkey
+								@Profile.Location
 							</p>
 						</div>
 						<div class="freelancer flex justify-center items-center gap-4">
@@ -43,14 +43,6 @@
 							<p class="freelancer-status text-white text-sm font-normal font-mono leading-none">
 								Full-time / Freelancer
 							</p>
-						</div>
-						<div class="website flex justify-center items-center gap-4">
-							<span class="material-symbols-outlined text-sm text-white">
-								public</span>
-							<a href="http://www.sinantokmak.com"
-								class="website-link text-white text-sm font-normal font-mono leading-none">
-								www.sinantokmak.com
-							</a>
 						</div>
 					</div>
 					<div class="Label justify-start items-start gap-4 inline-flex">
@@ -86,11 +78,11 @@
 							&lt;h1&gt;
 						</div>
 						<div class="Text self-stretch px-4 text-white text-5xl">
-							<h2>Hey, <span>Im Geraldson</span></h2>
+							<h2>Hey, <span class="text-cyan-400">Im @Profile.Name</span></h2>
 							<h2>Full-stack Developer</h2>
-							<div class="H1 text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none">
-								&lt;h1/&gt;
-							</div>
+						</div>
+						<div class="H1 text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none pt-5">
+							&lt;h1/&gt;
 						</div>
 					</div>
 					<div class="Para self-stretch h-40 flex-col justify-start items-start gap-4 flex">
@@ -99,8 +91,7 @@
 						</div>
 						<div class="Text px-6 justify-start items-start inline-flex">
 							<p class="w-96 text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
-								I help business grow by crafting amazing web experiences. If you’re looking for a
-								developer that likes to get stuff done,</p>
+								@Profile.About</p>
 						</div>
 						<div class="P text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none">
 							&lt;p/&gt;
@@ -117,16 +108,16 @@
 				<div
 					class="Highlights px-8 py-12 bg-zinc-900 rounded-3xl shadow flex-col justify-center items-start gap-12 inline-flex">
 					<div class="Language justify-start items-center gap-4 inline-flex">
-						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">4
+						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">@ProgramingLanguagesCount
 						</p>
 						<p class="Language text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
 							Programming Language</p>
 					</div>
 					<div class="Language justify-start items-center gap-4 inline-flex">
-						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">4
+						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">@YearsOfExperience
 						</p>
 						<p class="Language text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
-							Programming Language</p>
+							Years Of Experience</p>
 					</div>
 					<div class="Language justify-start items-center gap-4 inline-flex">
 						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">4
@@ -139,4 +130,3 @@
 		</div>
 	</div>
 </div>
-

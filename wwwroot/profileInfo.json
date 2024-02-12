@@ -2,7 +2,8 @@
 	"Name": "Geraldson",
 	"Age": 28,
 	"Profession": "Software Engineer",
-	"WorkingSince": "2022",
+	"Location": "Santo Domingo, Dominican Republic",
+	"WorkingSince": "2022/01/01",
 	"About": "I am a software engineer with 5 years of experience in the field. I have worked with many technologies, such as Java, C#, Python, Javascript, Angular, React, Node, etc. I am currently working as a fullstack developer at a company called 4all.",
 	"Skill": [
 		{
@@ -100,7 +101,7 @@
 		},
 		{
 			"Name": "Email",
-			"Link": ""
+			"Link": "Geraldson.a.p@gmail.com"
 		}
 	]
 }

@@ -995,6 +995,11 @@ html {
   padding-bottom: 2rem;
 }
 
+.px-16{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pb-20{
   padding-bottom: 3.5rem;
 }
@@ -1029,6 +1034,10 @@ html {
 
 .pt-16{
   padding-top: 2.5rem;
+}
+
+.pt-5{
+  padding-top: 1.25rem;
 }
 
 .text-center{

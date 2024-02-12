@@ -76,6 +76,9 @@ namespace MyPortafolio.Models
 		[JsonPropertyName("Profession")]
 		public string Profession { get; set; }
 
+		[JsonPropertyName("Location")]
+		public string Location { get; set; }
+
 		[JsonPropertyName("About")]
 		public string About { get; set; }
 

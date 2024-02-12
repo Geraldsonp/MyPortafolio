@@ -8,17 +8,22 @@ namespace MyPortafolio.Components
 		[CascadingParameter]
 		public Profile Profile { get; set; }
 
-		[Parameter]
-		public string WorkingSince { get; set; } = "2022";
-		private string YearsOfExperience => ((DateTime.Now - DateTime.Parse($"{WorkingSince}-01-01")).TotalDays / 365).ToString("0");
+		private string YearsOfExperience { get; set; }
+		private string Email { get; set; }
 
-		private string GetEmail()
+		private int ProgramingLanguagesCount => Profile.Skill.Count(s => s.Type == "Language");
+
+		protected override Task OnInitializedAsync()
 		{
-			if (Profile == null)
-				return string.Empty;
-
-			return Profile.Social.Where(s => s.Name.ToLower() == "email").FirstOrDefault()?.Link ?? string.Empty;
+			return base.OnInitializedAsync();
 		}
+
+		protected override void OnParametersSet()
+		{
+			YearsOfExperience = (DateTime.Now.Year - Convert.ToDateTime(Profile.WorkingSince).Year).ToString();
+			Email = Profile.Social.FirstOrDefault(s => s.Name == "Email")?.Link ?? "";
+		}
+
 
 	}
 	public class Skill
