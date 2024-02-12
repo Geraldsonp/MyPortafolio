@@ -60,6 +60,9 @@ namespace MyPortafolio.Models
 
 		[JsonPropertyName("Link")]
 		public string Link { get; set; }
+
+		[JsonPropertyName("Icon")]
+		public string Icon { get; set; }
 	}
 
 	public class Profile
@@ -82,6 +85,9 @@ namespace MyPortafolio.Models
 		[JsonPropertyName("About")]
 		public string About { get; set; }
 
+		[JsonPropertyName("CvLink")]
+		public string CvLink { get; set; }
+
 		[JsonPropertyName("Skill")]
 		public List<Skill> Skill { get; set; } = new List<Skill>();
 
@@ -94,8 +100,8 @@ namespace MyPortafolio.Models
 		[JsonPropertyName("Projects")]
 		public List<Project> Projects { get; set; } = new List<Project>();
 
-		[JsonPropertyName("Social")]
-		public List<Social> Social { get; set; } = new List<Social>();
+		[JsonPropertyName("Socials")]
+		public List<Social> Socials { get; set; } = new List<Social>();
 	}
 
 

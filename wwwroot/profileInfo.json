@@ -1,10 +1,12 @@
 {
 	"Name": "Geraldson",
+	"LastName": "Perez",
 	"Age": 28,
-	"Profession": "Software Engineer",
+	"Profession": "Web Developer",
 	"Location": "Santo Domingo, Dominican Republic",
 	"WorkingSince": "2022/01/01",
-	"About": "I am a software engineer with 5 years of experience in the field. I have worked with many technologies, such as Java, C#, Python, Javascript, Angular, React, Node, etc. I am currently working as a fullstack developer at a company called 4all.",
+	"CvLink": "https://drive.google.com/file/d/1J9Z",
+	"About": "I am a software engineer with 2 years of experience in the field. I have worked with many technologies, such as Java, C#, Python, Javascript, Angular, React, Node, etc. I am currently working as a fullstack developer at a company called 4all.",
 	"Skill": [
 		{
 			"Name": "C#",
@@ -85,24 +87,18 @@
 	"Socials": [
 		{
 			"Name": "Github",
-			"Link": ""
+			"Link": "https://github.com/Geraldsonp",
+			"Icon": "fa-github"
 		},
 		{
 			"Name": "Linkedin",
-			"Link": ""
-		},
-		{
-			"Name": "Instagram",
-			"Link": ""
-		},
-		{
-			"Name": "Facebook",
-			"Link": ""
+			"Link": "https://www.linkedin.com/in/geraldsonperez/",
+			"Icon": "fa-linkedin"
 		},
 		{
 			"Name": "Email",
-			"Link": "Geraldson.a.p@gmail.com"
+			"Link": "Geraldson.a.p@gmail.com",
+			"Icon": "fa-envelope"
 		}
 	]
 }
-

@@ -1,13 +1,9 @@
 ﻿@inherits LayoutComponentBase
 <CascadingValue Value="Profile">
-    <div class=" flex-col justify-start items-start inline-flex w-full max-w-full bg-gray-800 ">
+    <div class="flex-col justify-center inline-flex w-full max-w-full bg-gray-800 ">
         <NavMenu />
         <hr class="border-gray-600" />
-        <main>
-            <article>
-                @Body
-            </article>
-        </main>
+        @Body
     </div>
 </CascadingValue>
 @code {

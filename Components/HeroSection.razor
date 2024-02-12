@@ -1,14 +1,13 @@
-<div class=" px-16 pt-16 pb-32 bg-gray-800 justify-center items-start inline-flex">
-	<MenuSideBar />
-	<div class="Container grow shrink basis-0 flex-col justify-center items-center gap-16 inline-flex">
-		<div class=" self-stretch justify-center items-center inline-flex mb-10">
-			<h2 class="Developer text-teal-200 text-9xl font-normal font-['Ubuntu'] capitalize leading-10">Web Developer
-			</h2>
-		</div>
-		<div class="Content self-stretch px-32 justify-center items-center gap-32 inline-flex">
+<div class="px-16 pt-16 pb-32 bg-gray-800 justify-center items-start flex flex-col">
+	<div class="flex-col justify-center items-center gap-16 flex w-full">
+		<h2
+			class=" text-teal-200 text-7xl  xl:text-9xl font-normal font-['Ubuntu'] capitalize leading-10 w-full text-center">
+			Web Developer
+		</h2>
+		<div class="Content self-stretch  px-16 justify-center items-center gap-32 flex flex-col xl:flex-row">
 			<div
-				class="Left p-6  rounded-tl-3xl rounded-br-3xl shadow border-4 border-white flex-col justify-center items-start gap-4">
-				<div class="Content flex-col justify-start items-center gap-8 flex">
+				class="p-6  rounded-tl-3xl rounded-br-3xl shadow border-4 border-white flex-col  md:flex-row justify-center items-start gap-4">
+				<div class="Content flex-col  justify-start items-center gap-8 flex">
 					<figure class="PhotoName flex-col justify-start items-center gap-4 flex">
 						<img class="ProfilePhoto rounded-3xl border-2 border-cyan-400 h-32" src="./profilePic.jpeg" />
 						<figcaption class="Name flex-col justify-start items-center flex">
@@ -17,7 +16,7 @@
 								@Profile?.Name</h3>
 							<div
 								class="FullStackDeveloper text-white text-sm font-normal font-['IBM Plex Mono'] leading-none">
-								@Profile.Profession</div>
+								@Profile?.Profession</div>
 						</figcaption>
 					</figure>
 
@@ -34,7 +33,7 @@
 							<span class="material-symbols-outlined text-sm text-white">
 								location_on</span>
 							<p class="location-name text-white text-sm leading-none">
-								@Profile.Location
+								@Profile?.Location
 							</p>
 						</div>
 						<div class="freelancer flex justify-center items-center gap-4">
@@ -64,34 +63,34 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex justify-center py-2">
-					<button type="button"
-						class="ButtonText text-xl font-normal font-['Ubuntu'] capitalize leading-normal bg-white px-3 py-2 rounded-xl">
-						Download CV <span class="material-symbols-outlined text-xl  ">
-							download</span></button>
+
+				<div class="flex justify-center align-middle mt-4">
+					<a href="@Profile?.CvLink" target="_blank"
+						class="text-md font-normal font-['Ubuntu'] capitalize leading-normal bg-white px-3 py-1 rounded-xl hover:cursor-pointer">
+						Download CV <span class="material-symbols-outlined text-xl  ">download</span></a>
 				</div>
 			</div>
-			<div class="Right justify-center items-center flex">
-				<div class="Info flex-col justify-start items-start gap-8 flex">
+			<div class="flex flex-col xl:flex-row xl:justify-start gap-32 justify-center ">
+				<div class="Info justify-start items-start gap-8 flex flex-col">
 					<div class="Title flex-col flex">
 						<div class="H1 text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none pb-5">
 							&lt;h1&gt;
 						</div>
-						<div class="Text self-stretch px-4 text-white text-5xl">
-							<h2>Hey, <span class="text-cyan-400">Im @Profile.Name</span></h2>
+						<div class="Text self-stretch px-4 text-white text-3xl md:text-5xl">
+							<h2>Hey, <span class="text-cyan-400">Im @Profile?.Name</span></h2>
 							<h2>Full-stack Developer</h2>
 						</div>
 						<div class="H1 text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none pt-5">
 							&lt;h1/&gt;
 						</div>
 					</div>
-					<div class="Para self-stretch h-40 flex-col justify-start items-start gap-4 flex">
+					<div class="flex-col justify-start items-start gap-4 flex my-4">
 						<div class="P text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none">
 							&lt;p&gt;
 						</div>
 						<div class="Text px-6 justify-start items-start inline-flex">
 							<p class="w-96 text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
-								@Profile.About</p>
+								@Profile?.About</p>
 						</div>
 						<div class="P text-teal-200 text-sm font-normal font-['IBM Plex Mono'] leading-none">
 							&lt;p/&gt;
@@ -106,24 +105,27 @@
 					</div>
 				</div>
 				<div
-					class="Highlights px-8 py-12 bg-zinc-900 rounded-3xl shadow flex-col justify-center items-start gap-12 inline-flex">
+					class="Highlights px-8 py-12 bg-zinc-900 rounded-3xl shadow flex-col justify-center items-start gap-24 inline-flex">
 					<div class="Language justify-start items-center gap-4 inline-flex">
-						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">@ProgramingLanguagesCount
+						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">
+							@ProgramingLanguagesCount
 						</p>
 						<p class="Language text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
 							Programming Language</p>
 					</div>
 					<div class="Language justify-start items-center gap-4 inline-flex">
-						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">@YearsOfExperience
+						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">
+							@YearsOfExperience
 						</p>
 						<p class="Language text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
 							Years Of Experience</p>
 					</div>
 					<div class="Language justify-start items-center gap-4 inline-flex">
-						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">4
+						<p class=" text-cyan-400 text-5xl font-medium font-['IBM Plex Mono'] capitalize leading-10">
+							@ToolsCount
 						</p>
 						<p class="Language text-white text-base font-normal font-['IBM Plex Mono'] leading-tight">
-							Programming Language</p>
+							Development Tools</p>
 					</div>
 				</div>
 			</div>
