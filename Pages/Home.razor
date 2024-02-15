@@ -11,7 +11,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var profile = await Http.GetFromJsonAsync<Models.Profile>("https://gpblobfreestorage.blob.core.windows.net/test/profileInfo.json");
+        @* var profile = await Http.GetFromJsonAsync<Models.Profile>("https://gpblobfreestorage.blob.core.windows.net/test/profileInfo.json");
         if (profile != null)
         {
             Profile = profile;
@@ -19,6 +19,6 @@
         else
         {
             Profile = new Models.Profile();
-        }
+        } *@
     }
 }

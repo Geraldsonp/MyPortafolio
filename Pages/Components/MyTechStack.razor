@@ -25,7 +25,7 @@
     public List<Skill>? Skills { get; set; }
     protected override async Task OnInitializedAsync()
     {
-        Skills = Configuration.GetSection("profile:Skill").Get<List<Skill>>();
+        @* Skills = Configuration.GetSection("profile:Skill").Get<List<Skill>>(); *@
         await base.OnInitializedAsync();
     }
 
