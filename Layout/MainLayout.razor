@@ -1,19 +1,18 @@
 ﻿@inherits LayoutComponentBase
-<CascadingValue Value="Profile">
-    <div class="flex-col justify-center inline-flex w-full max-w-full bg-gray-800 ">
-        <NavMenu />
-        <hr class="border-gray-600" />
-        @Body
-    </div>
-</CascadingValue>
+    <NavMenu />
+    @Body
 @code {
     [Inject]
     HttpClient Http { get; set; }
+
+    [Inject]
+    IJSRuntime Js { get; set; }
     public Models.Profile Profile { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        var profile = await Http.GetFromJsonAsync<Models.Profile>("https://gpblobfreestorage.blob.core.windows.net/test/profileInfo.json");
+        var profile = await
+        Http.GetFromJsonAsync<Models.Profile>("https://gpblobfreestorage.blob.core.windows.net/test/profileInfo.json");
         if (profile != null)
         {
             Profile = profile;
@@ -21,6 +20,15 @@
         else
         {
             Profile = new Models.Profile();
+        }
+
+    }
+
+    protected override async Task OnAfterRenderAsync(bool isFirstRender)
+    {
+        if (isFirstRender)
+        {
+            await Js.InvokeVoidAsync("window.initializeFlowbite");
         }
     }
 }

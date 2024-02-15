@@ -1,50 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: "Poppins", sans-serif;
   }
 }
 
 
+.name-gradient {
+  background: #1B4C9B;
+  background: linear-gradient(to right, #1B4C9B 0%, #9A1B7E 81%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-.BGTextU {
-	@apply  text-9xl font-normal
 }
 
-.H1U {
-	@apply text-6xl font-normal
-}
-
-
-.skill-pill {
-	@apply bg-Brand1 text-black rounded-md px-2
-}
-
-.about-section{
-	background: url('../public/images/tile_background.png') 
-}
-
-.module-title{
-	@apply text-4xl font-normal font-Ubuntu text-Brand1 break-words text-center
-}
-	
-.skills-section {
-		background: linear-gradient(5deg, rgba(75, 75, 75, 0.671), rgba(65, 65, 65, 0.836)), url('../public/images/skills-bg.jpg');
-		background-size: cover;
-	}
-
-.skill-subtitle{
-	@apply text-sm font-normal font-IBM text-white break-words text-center
-}
-
-.skill-circle{
-	@apply rounded-full p-4 relative
-}
-
-.skill-circle p {
-	@apply absolute w-16 text-xs bottom-[-20px] text-white font-IBM text-center
+.image-boder {
+  
+  @apply rounded-full p-2 bg-gradient-to-br from-fuchsia-800 to-indigo-600
 }

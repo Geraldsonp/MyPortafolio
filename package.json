@@ -6,5 +6,8 @@
     "build-css": "tailwindcss build -i wwwroot/css/tailwindInput.css -o wwwroot/css/app.css",
     "build": "tailwindcss build -i wwwroot/css/tailwindInput.css -o wwwroot/css/app.css --minify",
     "watch-css": "tailwindcss build -i wwwroot/css/tailwindInput.css -o wwwroot/css/app.css --watch"
+  },
+  "dependencies": {
+    "flowbite": "^2.3.0"
   }
 }

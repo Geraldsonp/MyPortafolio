@@ -1,0 +1,32 @@
+﻿<div class="flex justify-center">
+    <div>
+        <h1 class="text-5xl text-primary font-medium text-center">My Tech Stack</h1>
+        <p class="text-3xl text-primary">Technologies I've been Working with recently</p>
+    </div>
+
+    <div class="flex gap-16 flex-wrap">
+        @if (Skills != null)
+        {
+            @foreach (var skill in Skills)
+            {
+                 Console.WriteLine(skill);
+                <div class="flex flex-col items-center gap-4">
+                    <p class="text-primary text-lg">@skill.Name</p>
+                </div>
+            }
+        }
+    </div>
+</div>
+@code {
+
+    [Inject]
+    public IConfiguration Configuration { get; set; }
+
+    public List<Skill>? Skills { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        Skills = Configuration.GetSection("profile:Skill").Get<List<Skill>>();
+        await base.OnInitializedAsync();
+    }
+
+}

@@ -1,6 +1,5 @@
 using System;
 using System.Text.Json.Serialization;
-using MyPortafolio.Components;
 
 namespace MyPortafolio.Models
 {
@@ -89,7 +88,7 @@ namespace MyPortafolio.Models
 		public string CvLink { get; set; }
 
 		[JsonPropertyName("Skill")]
-		public List<Skill> Skill { get; set; } = new List<Skill>();
+		public List<Skill> Skills { get; set; } = new List<Skill>();
 
 		[JsonPropertyName("Education")]
 		public List<Education> Education { get; set; } = new List<Education>();
@@ -104,5 +103,9 @@ namespace MyPortafolio.Models
 		public List<Social> Socials { get; set; } = new List<Social>();
 	}
 
-
+	public class Skill
+	{
+		public string Name { get; set; }
+		public string Type { get; set; }
+	}
 }
