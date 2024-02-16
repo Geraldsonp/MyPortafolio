@@ -5,20 +5,9 @@
 </div>
 
 @code {
-    [Inject]
-    HttpClient Http { get; set; }
-    public Models.Profile Profile { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        var profile = await Http.GetFromJsonAsync<Models.Profile>("https://gpblobfreestorage.blob.core.windows.net/test/profileInfo.json");
-        if (profile != null)
-        {
-            Profile = profile;
-        }
-        else
-        {
-            Profile = new Models.Profile();
-        }
+        
     }
 }
