@@ -7,21 +7,10 @@
     <div class="flex gap-24 flex-wrap max-w-7xl ">
         @foreach (var skill in Skills)
         {
-
             <div class="flex flex-col gap-1 items-center">
-                @if (skill.Name == "C#")
-                {
-                    <img src="./techs/csharp.svg" alt="@skill.Name" class="w-14 h-14">
-                    <p class="text-primary text-lg">@skill.Name</p>
-                }
-                else
-                {
-                    <img src="./techs/@(skill.Name).svg" alt="@skill.Name" class="w-14 h-14">
-                    <p class="text-primary text-lg">@skill.Name</p>
-                }
-
+                <img src="@skill.Link" alt="@skill.Name" class="w-14 h-14">
+                <p class="text-primary text-lg">@skill.Name</p>
             </div>
-
         }
     </div>
 </div>
