@@ -1,13 +1,22 @@
 ﻿@page "/"
 <div class="mt-10 flex flex-col gap-24">
-    <HeroSection/>
-    <MyTechStack/>
+    <HeroSection Profile="ProfileService.Profile" />
+    <MyTechStack Skills="ProfileService.Profile.Skills" />
+    <Projects PersonalProjects="ProfileService.Profile.Projects" />
 </div>
 
 @code {
-
+    [Inject]
+    public ProfileService ProfileService { get; set; }
+    private Profile Profile { get; set; }
     protected override async Task OnInitializedAsync()
     {
-        
+        ProfileService.OnProfileChanged += LoadProfile;
+    }
+
+    public void LoadProfile()
+    {
+        Profile = ProfileService.Profile;
+        StateHasChanged();
     }
 }

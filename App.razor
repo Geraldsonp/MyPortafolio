@@ -10,3 +10,25 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+    [Inject]
+    ProfileService ProfileService { get; set; }
+    [Inject]
+    HttpClient Http { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await Http.GetAsync("https://gpblobfreestorage.blob.core.windows.net/test/profileInfo.json");
+
+        if (response.IsSuccessStatusCode)
+        {
+            var profile = await response.Content.ReadFromJsonAsync<Profile>();
+            ProfileService.SetProfile(profile);
+        }
+        else
+        {
+            Console.WriteLine("Failed to get profile info.");
+        }
+    }
+}

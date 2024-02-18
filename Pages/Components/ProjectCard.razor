@@ -1,0 +1,24 @@
+﻿<div class="max-w-xs  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg " src="@Project.Image" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white ">@Project.Name</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-xs">@Project.Description</p>
+        <div>
+            <span>Tech stack: @Project.TechStach</span>
+        </div>
+        <div class="flex mt-4 gap-24 text-xs">
+            <a href="@Project.Link" class="flex gap-1"><span class="material-symbols-outlined">link</span> Live Preview</a>
+            <a href="@Project.CodeLink">Source Code</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Project Project { get; set; }
+
+}

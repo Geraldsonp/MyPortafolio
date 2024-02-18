@@ -1,28 +1,10 @@
 ﻿@inherits LayoutComponentBase
-    <NavMenu />
-    @Body
+<NavMenu />
+@Body
 @code {
-    [Inject]
-    HttpClient Http { get; set; }
 
     [Inject]
     IJSRuntime Js { get; set; }
-    public Models.Profile Profile { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-        @* var profile = await
-        Http.GetFromJsonAsync<Models.Profile>("https://gpblobfreestorage.blob.core.windows.net/test/profileInfo.json");
-        if (profile != null)
-        {
-            Profile = profile;
-        }
-        else
-        {
-            Profile = new Models.Profile();
-        } *@
-
-    }
 
     protected override async Task OnAfterRenderAsync(bool isFirstRender)
     {

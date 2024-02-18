@@ -47,6 +47,10 @@ namespace MyPortafolio.Models
 
 		[JsonPropertyName("Link")]
 		public string Link { get; set; }
+		[JsonPropertyName("CodeLink")]
+		public string CodeLink { get; set; }
+		[JsonPropertyName("TechStach")]
+		public string TechStach { get; set; }
 
 		[JsonPropertyName("Image")]
 		public string Image { get; set; }

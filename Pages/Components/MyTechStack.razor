@@ -1,31 +1,33 @@
-﻿<div class="flex justify-center">
+﻿<div class="flex flex-col justify-center items-center gap-24">
     <div>
         <h1 class="text-5xl text-primary font-medium text-center">My Tech Stack</h1>
-        <p class="text-3xl text-primary">Technologies I've been Working with recently</p>
+        <p class="text-3xl text-primary ">Technologies I've been Working with recently</p>
     </div>
 
-    <div class="flex gap-16 flex-wrap">
-        @if (Skills != null)
+    <div class="flex gap-24 flex-wrap max-w-7xl ">
+        @foreach (var skill in Skills)
         {
-            @foreach (var skill in Skills)
-            {
-                 Console.WriteLine(skill);
-                <div class="flex flex-col items-center gap-4">
+
+            <div class="flex flex-col gap-1 items-center">
+                @if (skill.Name == "C#")
+                {
+                    <img src="./techs/csharp.svg" alt="@skill.Name" class="w-14 h-14">
                     <p class="text-primary text-lg">@skill.Name</p>
-                </div>
-            }
+                }
+                else
+                {
+                    <img src="./techs/@(skill.Name).svg" alt="@skill.Name" class="w-14 h-14">
+                    <p class="text-primary text-lg">@skill.Name</p>
+                }
+
+            </div>
+
         }
     </div>
 </div>
+
 @code {
-
-    [Inject]
-    public IConfiguration Configuration { get; set; }
-
+    [Parameter]
     public List<Skill>? Skills { get; set; }
-    protected override async Task OnInitializedAsync()
-    {
-        
-    }
 
 }

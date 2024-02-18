@@ -1,0 +1,26 @@
+﻿<div class="flex justify-center">
+    <div>
+        <h1 class="text-5xl text-primary font-medium text-center">Projects</h1>
+        <p class="text-3xl text-primary">Things I've built so far!</p>
+    </div>
+    <div>
+       @if(PersonalProjects != null)
+       {
+           foreach(var project in PersonalProjects)
+           {
+               <ProjectCard Project="project" />
+           }
+       }
+       else
+       {
+           <p class="text-3xl text-primary">No projects to show</p>
+       }
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public IEnumerable<Project> PersonalProjects { get; set; }
+
+}
