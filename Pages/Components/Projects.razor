@@ -1,10 +1,10 @@
-﻿<div class="flex justify-center">
-    <div>
+﻿<div class="flex justify-center flex-col gap-16 justify-center items-center mb-10">
+    <div class="flex flex-col gap-7">
         <h1 class="text-5xl text-primary font-medium text-center">Projects</h1>
-        <p class="text-3xl text-primary">Things I've built so far!</p>
+        <p class="text-3xl text-primary text-center">Things I've built so far!</p>
     </div>
     <div>
-       @if(PersonalProjects != null)
+       @if(PersonalProjects != null && PersonalProjects.Any())
        {
            foreach(var project in PersonalProjects)
            {
@@ -13,7 +13,7 @@
        }
        else
        {
-           <p class="text-3xl text-primary">No projects to show</p>
+           <p class="text-3xl text-primary">Coming Soon!</p>
        }
     </div>
 

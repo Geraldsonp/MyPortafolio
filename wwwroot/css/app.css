@@ -1160,6 +1160,10 @@ html {
   margin-top: 1rem;
 }
 
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
 .block{
   display: block;
 }
@@ -1436,6 +1440,10 @@ html {
 
 .gap-12{
   gap: 3rem;
+}
+
+.gap-7{
+  gap: 1.75rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
