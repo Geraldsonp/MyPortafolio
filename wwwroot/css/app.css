@@ -911,6 +911,7 @@ input:checked + .toggle-bg{
 
 html {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth ;
 }
 
 *, ::before, ::after{
@@ -1140,6 +1141,10 @@ html {
   margin-bottom: 0.25rem;
 }
 
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -1158,10 +1163,6 @@ html {
 
 .mt-4{
   margin-top: 1rem;
-}
-
-.mb-10{
-  margin-bottom: 2.5rem;
 }
 
 .block{
@@ -1200,8 +1201,8 @@ html {
   height: 2.5rem;
 }
 
-.h-2{
-  height: 0.5rem;
+.h-14{
+  height: 3.5rem;
 }
 
 .h-4{
@@ -1228,10 +1229,6 @@ html {
   height: 2.25rem;
 }
 
-.h-14{
-  height: 3.5rem;
-}
-
 .w-1\/2{
   width: 50%;
 }
@@ -1240,8 +1237,8 @@ html {
   width: 2.5rem;
 }
 
-.w-2{
-  width: 0.5rem;
+.w-14{
+  width: 3.5rem;
 }
 
 .w-4{
@@ -1264,8 +1261,8 @@ html {
   width: 100%;
 }
 
-.w-14{
-  width: 3.5rem;
+.max-w-7xl{
+  max-width: 80rem;
 }
 
 .max-w-screen-xl{
@@ -1274,34 +1271,6 @@ html {
 
 .max-w-xs{
   max-width: 20rem;
-}
-
-.max-w-lg{
-  max-width: 32rem;
-}
-
-.max-w-96{
-  max-width: 24rem;
-}
-
-.max-w-xl{
-  max-width: 36rem;
-}
-
-.max-w-2xl{
-  max-width: 42rem;
-}
-
-.max-w-3xl{
-  max-width: 48rem;
-}
-
-.max-w-4xl{
-  max-width: 56rem;
-}
-
-.max-w-7xl{
-  max-width: 80rem;
 }
 
 .flex-1{
@@ -1424,22 +1393,6 @@ html {
 
 .gap-24{
   gap: 6rem;
-}
-
-.gap-4{
-  gap: 1rem;
-}
-
-.gap-2{
-  gap: 0.5rem;
-}
-
-.gap-8{
-  gap: 2rem;
-}
-
-.gap-12{
-  gap: 3rem;
 }
 
 .gap-7{
