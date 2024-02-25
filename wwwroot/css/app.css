@@ -1399,6 +1399,10 @@ html {
   gap: 1.75rem;
 }
 
+.gap-12{
+  gap: 3rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1606,6 +1610,10 @@ html {
 
 .text-start{
   text-align: start;
+}
+
+.align-middle{
+  vertical-align: middle;
 }
 
 .text-2xl{
