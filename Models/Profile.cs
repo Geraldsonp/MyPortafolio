@@ -4,69 +4,6 @@ using System.Text.Json.Serialization;
 namespace MyPortafolio.Models
 {
 	// Root myDeserializedClass = JsonSerializer.Deserialize<Root>(myJsonResponse);
-	public class Education
-	{
-		[JsonPropertyName("Institution")]
-		public string Institution { get; set; }
-
-		[JsonPropertyName("Course")]
-		public string Course { get; set; }
-
-		[JsonPropertyName("Start")]
-		public string Start { get; set; }
-
-		[JsonPropertyName("End")]
-		public string End { get; set; }
-	}
-
-	public class Experience
-	{
-		[JsonPropertyName("Company")]
-		public string Company { get; set; }
-
-		[JsonPropertyName("Position")]
-		public string Position { get; set; }
-
-		[JsonPropertyName("Start")]
-		public string Start { get; set; }
-
-		[JsonPropertyName("End")]
-		public string End { get; set; }
-
-		[JsonPropertyName("Description")]
-		public string Description { get; set; }
-	}
-
-	public class Project
-	{
-		[JsonPropertyName("Name")]
-		public string Name { get; set; }
-
-		[JsonPropertyName("Description")]
-		public string Description { get; set; }
-
-		[JsonPropertyName("Link")]
-		public string Link { get; set; }
-		[JsonPropertyName("CodeLink")]
-		public string CodeLink { get; set; }
-		[JsonPropertyName("TechStack")]
-		public string TechStack { get; set; }
-
-		[JsonPropertyName("Image")]
-		public string Image { get; set; }
-	}
-
-	public class Social
-	{
-		[JsonPropertyName("Name")]
-		public string Name { get; set; }
-
-		[JsonPropertyName("Link")]
-		public string Link { get; set; }
-
-		[JsonPropertyName("Icon")]
-		public string Icon { get; set; }
-	}
 
 	public class Profile
 	{

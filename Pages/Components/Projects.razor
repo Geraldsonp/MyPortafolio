@@ -1,9 +1,9 @@
-﻿<div id="projects" class="flex justify-center flex-col gap-16 justify-center items-center mb-10">
+﻿<div id="projects" class="flex w-full flex-col gap-16 justify-center items-center mb-48">
     <div class="flex flex-col gap-7">
         <h1 class="text-5xl text-primary font-medium text-center">Projects</h1>
         <p class="text-3xl text-primary text-center">Things I've built so far!</p>
     </div>
-    <div>
+    <div class="flex flex-wrap">
        @if(PersonalProjects != null && PersonalProjects.Any())
        {
            foreach(var project in PersonalProjects)
