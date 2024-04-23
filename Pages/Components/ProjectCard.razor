@@ -1,27 +1,36 @@
-﻿<div class="bg-white  rounded-lg  shadow-2xl p-1 relative">
-    <div class="relative">
+﻿<div class="bg-white rounded-lg shadow-2xl p-1 flex flex-col relative ">
+    <div class="relative flex justify-center bg-black rounded">
         <img class=" max-w-80 max-h-80 rounded" src="@Project.Image" alt=""/>
         <div class="absolute top-[10rem] left-5">
             <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium border @(Project.Stage == ProjectStage.Completed ? "border-teal-500 text-teal-500" : "border-yellow-500 text-yellow-500")">@Project.Stage</span>
         </div>
     </div>
-    <div class="p-5 flex flex-col items-center">
-        <a href="#">
+    <div class="p-5 flex flex-col items-center flex-1 ">
+        <div class="flex flex-col items-center">
             <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white ">@Project.Name</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-xs">@Project.Description</p>
-        <div>
-            <span>Tech stack: @Project.TechStack</span>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-xs max-w-80">@Project.Description</p>
         </div>
-        <div class="flex mt-4 gap-12 text-xs">
-            <a href="@Project.Link" target="_blank" class="flex gap-1 items-center"><span class="material-symbols-outlined">link</span> Live Preview</a>
-            <a href="@Project.CodeLink" target="_blank" class="flex gap-1 items-center"><span class="material-symbols-outlined">code</span> Source Code </a>
+        <div class="flex flex-col items-center">
+            <div>
+                <span>Tech stack: @Project.TechStack</span>
+            </div>
+            <div class="flex mt-4 gap-12 text-xs">
+                @* <a href="@Project.Link" target="_blank" class="flex gap-1 items-center"><span class="material-symbols-outlined">link</span> Live Preview</a> *@
+                @* <a href="@Project.CodeLink" target="_blank" class="flex gap-1 items-center"><span class="material-symbols-outlined">code</span> Source Code </a> *@
+                @if (Project.Link != null)
+                {
+                <a href="@Project.Link" target="_blank" class="flex gap-1 items-center"><span class="material-symbols-outlined">link</span> Live Preview</a>
+                }
+                @if (Project.CodeLink != null)
+                {
+                <a href="@Project.CodeLink" target="_blank" class="flex gap-1 items-center"><span class="material-symbols-outlined">code</span> Source Code </a>
+                }
+            </div>
         </div>
     </div>
 </div>
 
 @code {
-    [Parameter]
-    public Project Project { get; set; }
+    [Parameter] public Project Project { get; set; }
 
 }
