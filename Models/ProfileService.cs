@@ -27,7 +27,7 @@ public class ProfileService
         Profile = new Profile();
     }
 
-    public IEnumerable<Social> GetSocials()
+    public IEnumerable<Social>? GetSocials()
     {
         return Profile.Socials;
     }

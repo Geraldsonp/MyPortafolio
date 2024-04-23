@@ -42,3 +42,8 @@ bld/
 *.bak_*
 *.bak-*
 *.bak~
+/.idea/.idea.MyPortafolio/.idea/.gitignore
+/.idea/.idea.MyPortafolio/.idea/.name
+/.idea/.idea.MyPortafolio/.idea/encodings.xml
+/.idea/.idea.MyPortafolio/.idea/indexLayout.xml
+/.idea/.idea.MyPortafolio/.idea/vcs.xml

@@ -41,7 +41,7 @@ namespace MyPortafolio.Models
 		public List<Project> Projects { get; set; } = new List<Project>();
 
 		[JsonPropertyName("Socials")]
-		public List<Social> Socials { get; set; } = new List<Social>();
+		public List<Social>? Socials { get; set; } = new List<Social>();
 	}
 
 	public class Skill
